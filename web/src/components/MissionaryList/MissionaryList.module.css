@@ -1,0 +1,45 @@
+/* components/MissionaryList/styles.module.css */
+.container {
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  font-family: "Montserrat";
+}
+
+.title {
+  color: var(--color-text-primary);
+  font-family: "Montserrat";
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  margin-top: 1.6rem;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 1.5rem;
+}
+
+.cardWrapper {
+  height: 100%;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-muted);
+  border-radius: 12px;
+  border: 1px dashed var(--color-surface-muted);
+  font-family: "Montserrat";
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
