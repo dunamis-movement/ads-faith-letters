@@ -5,3 +5,4 @@ export { LetterCard } from './LetterCard';
 export { LetterList } from './LetterList';
 export { MissionaryListSkeleton } from './MissionaryListSkeleton';
 export { LetterListSkeleton } from './LetterListSkeleton';
+export { Modal } from './Modal';

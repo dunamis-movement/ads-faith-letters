@@ -16,10 +16,10 @@ export interface Verse {
 }
 
 export interface Letter {
-  id: string;
+  id?: string;
   missionaryId: string;
   content: string;
-  verse: Verse;
+  verse?: Verse;
   senderName: string;
   date: string;
 }

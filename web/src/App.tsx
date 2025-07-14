@@ -1,12 +1,15 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Mail, Heart } from "lucide-react";
 import { MissionaryListSkeleton, LetterListSkeleton } from "./components";
 import styles from "./App.module.css";
+import CreateLetterModal from "./components/CreateLetterModal";
 
 const LetterList = React.lazy(() => import('./components/LetterList'));
 const MissionaryList = React.lazy(() => import('./components/MissionaryList'));
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -16,7 +19,7 @@ function App() {
         </div>
         <button
           className={styles.sendButton}
-          onClick={() => { }}
+          onClick={() => setIsModalOpen(true)}
           type="button"
         >
           Enviar carta
@@ -44,6 +47,8 @@ function App() {
           </p>
         </div>
       </footer>
+
+      <CreateLetterModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
